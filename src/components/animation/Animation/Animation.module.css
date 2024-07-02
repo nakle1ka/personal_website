@@ -1,0 +1,69 @@
+.animationContainer {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: var(--second-bg-color);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    animation-name: AnimationContainer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.AnimationElement {
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+
+    animation-duration: .85s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#One {
+    animation-name: AnimationElementToUp;
+    animation-delay: 0;
+    background-color: var(--main-blue);
+}
+
+#Two {
+    animation-name: AnimationElementToUp;
+    animation-delay: 100ms;
+    background-color: var(--main-red);
+}
+
+#Three {
+    animation-name: AnimationElementToUp;
+    animation-delay: 200ms;
+    background-color: var(--main-blue);
+}
+
+@keyframes AnimationContainer {
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+@keyframes AnimationElementToUp {
+    0% {
+        transform: translateY(100%)  
+    }
+    100% {
+        transform: translateY(-100%)
+    }
+}

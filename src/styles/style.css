@@ -1,0 +1,18 @@
+:root {
+    --first-bg-color: #2D2F4A;
+    --second-bg-color: #202135;
+
+    --main-red: #E4344F;
+    --main-blue: #45AFE3;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(0deg, var(--first-bg-color), var(--second-bg-color));
+}
+
+main {
+    padding: 0 min(10%, 300px);
+}

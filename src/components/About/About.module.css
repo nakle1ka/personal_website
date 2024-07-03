@@ -1,0 +1,165 @@
+#about {
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+}
+
+#greeting,
+#image_container {
+    width: 50%;
+    height: 100%;
+}
+
+#greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 0 0 auto;
+
+    height: 600px;
+
+    color: white;
+    position: relative;
+}
+
+.title,
+.subtitle {
+    font-weight: 400;
+}
+
+.title {
+    font-size: clamp(50px, 5vw, 80px);
+    line-height: clamp(50px, 5vw, 85px);
+}
+
+.blueSpan {
+    color: var(--main-blue);
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: clamp(25px, 2.5vw, 40px);
+    line-height: clamp(40px, 4.5vw, 85px);
+}
+
+.redSpan {
+    color: var(--main-red);
+    font-weight: 600;
+}
+
+#image_container {
+    display: flex;
+    align-items: center;
+}
+
+#image {
+    flex: 0 0 auto;
+    width: 100%;
+    /* height: 100%; */
+
+    position: relative;
+}
+
+#image::after {
+    content: '';
+    display: block;
+    padding-top: 70.1%;
+    width: 1px;
+}
+
+.laptop,
+.contact,
+.circleGraph,
+.picture,
+.redTriangle,
+.blueTriangle {
+    position: absolute;
+}
+
+.laptop {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65%;
+}
+
+.contact {
+    width: 22%;
+
+    top: 4%;
+    left: 3%;
+
+    transform: rotate(-30deg);
+}
+
+.circleGraph {
+    width: 15%;
+
+    top: 100%;
+    transform: translateY(-100%) rotate(-20deg);
+}
+
+.picture {
+    width: 17%;
+
+    left: 90%;
+    top: 100%;
+    transform: translateX(-100%) translateY(-100%) rotate(20deg);
+}
+
+/* triangles */
+
+.redTriangle {
+    width: 6%;
+    height: 7%;
+    background-color: var(--main-red);
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+}
+
+.blueTriangle {
+    width: 6%;
+    height: 7%;
+    background-color: var(--main-blue);
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+}
+
+#one {
+    top: 55%;
+    transform: rotate(163deg);
+}
+
+#two {
+    top: 85%;
+    left: 55%;
+    transform: rotate(25deg);
+}
+
+#three {
+    top: 45%;
+    left: 80%;
+
+    transform: rotate(73deg);
+}
+
+@media (width < 1000px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    
+        gap: 100px;
+
+        height: auto;
+    }
+
+    #greeting,
+    #image_container {
+        width: 100%;
+        height: 50%;
+    }
+    #image_container {
+        order: -1;
+    }
+}

@@ -14,5 +14,5 @@
 }
 
 main {
-    padding: 0 min(10%, 300px);
+    padding: clamp(100px, 12vw, 200px) min(10%, 300px) 0;
 }

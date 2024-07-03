@@ -1,4 +1,5 @@
 import Header from "./components/UI/Header/Header";
+import About from "./components/About/About";
 import Animation from "./components/animation/Animation/Animation";
 
 import "./styles/restart.css"
@@ -12,7 +13,7 @@ function App() {
     <>
       <Header logo={logoSvg}/>
       <main>
-
+        <About />
       </main>
 
       <Animation />

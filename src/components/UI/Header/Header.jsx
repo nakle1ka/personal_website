@@ -8,7 +8,7 @@ const Header = ({ logo }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50); // Изменяйте 100 на нужное значение
+        setIsScrolled(window.scrollY > 50);
     };
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const Header = ({ logo }) => {
                 ? [classes.default, classes.scrolled].join(" ")
                 : classes.default
         }>
-            <img src={logo} className={classes.logo} />
+            <img src={logo} alt="logo" className={classes.logo} />
 
             <nav className={classes.nav}>
                 <ul className={classes.ul}>

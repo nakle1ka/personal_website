@@ -16,6 +16,8 @@
     animation-timing-function: ease-in;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+
+    z-index: 100;
 }
 
 .AnimationElement {

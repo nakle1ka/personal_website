@@ -10,7 +10,7 @@ import contact from "../../images/big_img/contact_img.png"
 import circleGraph from "../../images/big_img/circleGraph_img.png"
 import picture from "../../images/big_img/picture_img.png"
 
-const About = () => {
+const About = ({ aboutRef }) => {
     const [isShowButton, setIsShowButton] = useState(false)
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const About = () => {
     }, [])
 
     return (
-        <section id={classes.about}>
+        <section id={classes.about} ref={aboutRef}>
             <div id={classes.greeting}>
                 <h2 className={classes.title}>
                     <ReactTyped

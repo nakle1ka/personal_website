@@ -79,11 +79,27 @@
 }
 
 .laptop {
+    width: 65%;
+
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 65%;
+    animation-name: laptop;
+    animation-delay: 500ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes laptop {
+    0% {
+        transform: translate(-50%, -50%) rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0) scale(1);
+    }
 }
 
 .contact {
@@ -93,6 +109,22 @@
     left: 3%;
 
     transform: rotate(-30deg);
+
+    animation-name: contact;
+    animation-delay: 500ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes contact {
+    0% {
+        transform: rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: rotate(20deg) scale(1);
+    }
 }
 
 .circleGraph {
@@ -100,6 +132,22 @@
 
     top: 100%;
     transform: translateY(-100%) rotate(-20deg);
+
+    animation-name: circleGraph;
+    animation-delay: 500ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes circleGraph {
+    0% {
+        transform: translateY(-100%) rotate(-20deg) rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: translateY(-100%) rotate(-20deg) rotate(30deg) scale(1);
+    }
 }
 
 .picture {
@@ -108,6 +156,22 @@
     left: 90%;
     top: 100%;
     transform: translateX(-100%) translateY(-100%) rotate(20deg);
+
+    animation-name: picture;
+    animation-delay: 500ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes picture {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: translateX(-100%) translateY(-100%) rotate(-20deg) rotate(30deg) scale(1);
+    }
 }
 
 /* triangles */
@@ -129,12 +193,44 @@
 #one {
     top: 55%;
     transform: rotate(163deg);
+
+    animation-name: oneTriangle;
+    animation-delay: 1000ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes oneTriangle {
+    0% {
+        transform: rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: rotate(163deg) scale(1);
+    }
 }
 
 #two {
     top: 85%;
     left: 55%;
     transform: rotate(25deg);
+
+    animation-name: twoTriangle;
+    animation-delay: 1000ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes twoTriangle {
+    0% {
+        transform: rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: rotate(25deg) scale(1);
+    }
 }
 
 #three {
@@ -142,14 +238,30 @@
     left: 80%;
 
     transform: rotate(73deg);
+
+    animation-name: threeTriangle;
+    animation-delay: 1000ms;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes threeTriangle {
+    0% {
+        transform: rotate(90deg) scale(0.5);
+    }
+
+    100% {
+        transform: rotate(73deg) scale(1);
+    }
 }
 
 @media (width < 1000px) {
     #about {
         flex-direction: column;
         align-items: center;
-        justify-content: center;    
-        gap: 100px;
+        justify-content: center;
+        gap: 70px;
 
         height: auto;
     }
@@ -159,7 +271,15 @@
         width: 100%;
         height: 50%;
     }
+
     #image_container {
         order: -1;
+        width: 70%;
+    }
+}
+
+@media (width < 600px) {
+    #image_container {
+        width: 100%;
     }
 }

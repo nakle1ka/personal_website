@@ -1,0 +1,34 @@
+.skillElement {
+    width: 100%;
+    min-height: 215px;
+
+    background-color: var(--card-color);
+
+    border-radius: 15px;
+    padding: 0px 30px;
+
+    display: flex;
+    gap: 5px;
+
+    transition: all 1s;
+}
+
+.skillImage {
+    width: min(40%, 110px);
+}
+
+.skillText {
+    display: flex;
+    align-items: center;
+
+    color: white;
+    font-size: clamp(20px, 2.8vw, 40px);
+    letter-spacing: -1px;
+
+    line-height: clamp(20px, 4vw, 40px);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-30%);
+}

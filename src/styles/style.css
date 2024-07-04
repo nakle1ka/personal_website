@@ -4,6 +4,8 @@
 
     --main-red: #E4344F;
     --main-blue: #45AFE3;
+
+    --card-color: #30314D;
 }
 
 #root {
@@ -15,4 +17,7 @@
 
 main {
     padding: clamp(100px, 12vw, 200px) min(10%, 300px) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }

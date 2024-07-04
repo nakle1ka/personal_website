@@ -4,8 +4,9 @@ import MyButton from "../MyButton/MyButton";
 
 import classes from "./Header.module.css"
 
-const Header = ({ logo }) => {
+const Header = ({ logo, refs }) => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [aboutRef, skillRef] = refs
 
     const handleScroll = () => {
         setIsScrolled(window.scrollY > 50);
@@ -29,8 +30,8 @@ const Header = ({ logo }) => {
 
             <nav className={classes.nav}>
                 <ul className={classes.ul}>
-                    <li className={classes.li}><button className={classes.list_item}>About</button></li>
-                    <li className={classes.li}><button className={classes.list_item}>Skills</button></li>
+                    <li className={classes.li}><button className={classes.list_item} onClick={() => aboutRef.current.scrollIntoView({behavior: "smooth"})}>About</button></li>
+                    <li className={classes.li}><button className={classes.list_item} onClick={() => skillRef.current.scrollIntoView({behavior: "smooth"})}>Skills</button></li>
                     <li className={classes.li}><button className={classes.list_item}>Portfolio</button></li>
                     <li className={classes.li}><button className={classes.list_item}>Contacts</button></li>
                 </ul>

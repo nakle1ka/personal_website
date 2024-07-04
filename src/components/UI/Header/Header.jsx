@@ -6,7 +6,7 @@ import classes from "./Header.module.css"
 
 const Header = ({ logo, refs }) => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [aboutRef, skillRef] = refs
+    const [aboutRef, skillRef, portfolioRef] = refs
 
     const handleScroll = () => {
         setIsScrolled(window.scrollY > 50);
@@ -32,8 +32,8 @@ const Header = ({ logo, refs }) => {
                 <ul className={classes.ul}>
                     <li className={classes.li}><button className={classes.list_item} onClick={() => aboutRef.current.scrollIntoView({behavior: "smooth"})}>About</button></li>
                     <li className={classes.li}><button className={classes.list_item} onClick={() => skillRef.current.scrollIntoView({behavior: "smooth"})}>Skills</button></li>
-                    <li className={classes.li}><button className={classes.list_item}>Portfolio</button></li>
-                    <li className={classes.li}><button className={classes.list_item}>Contacts</button></li>
+                    <li className={classes.li}><button className={classes.list_item} onClick={() => portfolioRef.current.scrollIntoView({behavior: "smooth"})}>Portfolio</button></li>
+                    <li className={classes.li}><button className={classes.list_item} onClick={() => aboutRef.current.scrollIntoView({behavior: "smooth"})}>Contacts</button></li>
                 </ul>
             </nav>
 

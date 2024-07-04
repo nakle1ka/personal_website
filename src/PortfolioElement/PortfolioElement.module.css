@@ -1,0 +1,79 @@
+.PortfolioElement {
+    width: 100%;
+    min-height: 200px;
+
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    gap: 15px;
+
+    background-color: var(--card-color);
+
+    transition: all 1s;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image {
+    display: inline-block;
+    max-width: 35%;
+    height: auto;
+    vertical-align: middle;
+
+    border-radius: 10px;
+}
+
+.skillImage {
+    width: 50px;
+}
+
+.name {
+    font-size: clamp(20px, 2.5vw,45px);
+    color: white;
+}
+
+.desc {
+    font-size: clamp(20px, 2vw,35px);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.skillImage {
+    width: clamp(50px, 8%, 80px);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-30%);
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (width < 1000px) {
+    .PortfolioElement {
+        flex-direction: column;
+    }
+
+    .image {
+        display: inline-block;
+        max-width: 80%;
+        height: auto;
+        vertical-align: middle;
+    
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .name, .desc {
+        text-align: center;
+    }
+    .skillsContainer {
+        justify-content: center;
+    }
+}

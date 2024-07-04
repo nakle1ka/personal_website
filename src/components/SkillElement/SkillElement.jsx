@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import classes from "./SkillElement.module.css"
 import { useInView } from "react-intersection-observer";
+import classes from "./SkillElement.module.css"
 
 const SkillElement = ({ image, text }) => {
     const [isVisible, setIsVisible] = useState(false)

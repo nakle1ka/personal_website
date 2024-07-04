@@ -14,7 +14,8 @@
 }
 
 .skillImage {
-    width: min(40%, 110px);
+    width: min(22%, 110px);
+    height: auto;
 }
 
 .skillText {
@@ -22,7 +23,7 @@
     align-items: center;
 
     color: white;
-    font-size: clamp(20px, 2.8vw, 40px);
+    font-size: clamp(20px, 2.4vw, 40px);
     letter-spacing: -1px;
 
     line-height: clamp(20px, 4vw, 40px);
@@ -31,4 +32,10 @@
 .hidden {
     opacity: 0;
     transform: translateX(-30%);
+}
+
+@media (width < 600px) {
+    .skillElement {
+        min-height: 120px;
+    }
 }

@@ -37,13 +37,7 @@
     color: var(--main-blue);
 }
 
-.hardElements {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.softElements {
+.hardElements, .softElements {
     display: flex;
     flex-direction: column;
     gap: 15px;

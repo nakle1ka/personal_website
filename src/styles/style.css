@@ -16,7 +16,7 @@
 }
 
 main {
-    padding: clamp(100px, 12vw, 200px) min(10%, 300px) 0;
+    padding: clamp(100px, 12vw, 200px) min(10%, 300px) 30px;
     display: flex;
     flex-direction: column;
     gap: 40px;

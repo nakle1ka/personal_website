@@ -1,0 +1,66 @@
+.hiddenNav {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transform: translateY(-100%);
+
+    background-color: var(--first-bg-color);
+
+    transition: all .3s;
+}
+
+.open {
+    transform: translateY(0);
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25%;
+}
+
+.list_item {
+    background: none;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-size: max(45px, 5vw);
+    font-weight: 100;
+    cursor: pointer;
+
+    transition: color .3s;
+}
+
+.list_item:hover {
+    color: white;
+}
+
+.list_item::after {
+    content: "";
+    display: block;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 5px;
+    transition: width .3s;
+}
+
+.list_item:hover::after {
+    width: 100%;
+}
+
+.li:nth-child(odd) .list_item::after {
+    background-color: var(--main-blue);
+}
+
+.li:nth-child(even) .list_item::after {
+    background-color: var(--main-red);
+}

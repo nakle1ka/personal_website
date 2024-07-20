@@ -4,9 +4,9 @@ import portfolioList from "../../helpers/portfolioList";
 
 import classes from "./Portfolio.module.css"
 
-const Portfolio = ({ portfolioRef }) => {
+const Portfolio = () => {
     return (
-        <section id={classes.portfolio} ref={portfolioRef}>
+        <section className={classes.portfolio} id="Portfolio">
             <h2 className={classes.title}>Portfolio</h2>
             <div className={classes.portfolioElements}>
                 {portfolioList.map(element =>

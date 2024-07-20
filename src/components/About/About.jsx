@@ -10,7 +10,7 @@ import contact from "../../images/big_img/contact_img.png"
 import circleGraph from "../../images/big_img/circleGraph_img.png"
 import picture from "../../images/big_img/picture_img.png"
 
-const About = ({ aboutRef }) => {
+const About = () => {
     const [isShowButton, setIsShowButton] = useState(false)
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const About = ({ aboutRef }) => {
     }, [])
 
     return (
-        <section id={classes.about} ref={aboutRef}>
+        <section className={classes.about} id="About">
             <div id={classes.greeting}>
                 <h2 className={classes.title}>
                     <ReactTyped
@@ -43,7 +43,7 @@ const About = ({ aboutRef }) => {
                     />
                 </h5>
 
-                {isShowButton && <MyButton text="My achievements" backgroundSetting="filled" />}
+                {isShowButton && <MyButton text="My achievements" backgroundSetting="filled" onClickFunction={() => window.open("https://drive.google.com/drive/folders/1hW0A-sumEanbMIwNfAWaJ0eyz73u1KUK?usp=sharing")}/>}
             </div>
 
             <div id={classes.image_container}>

@@ -1,4 +1,4 @@
-import financeGeneral from "../images/portfolio/finance/general.png"
+import financeGeneral from "../images/portfolio/finance/general.jpg"
 import financeProfile from "../images/portfolio/finance/profile.png"
 
 const portfolioList = [

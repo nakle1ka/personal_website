@@ -3,9 +3,9 @@ import SkillElement from "../SkillElement/SkillElement";
 
 import classes from "./Skills.module.css"
 
-const Skills = ({ skillRef }) => {
+const Skills = () => {
     return (
-        <section id={classes.skills} ref={skillRef}>
+        <section className={classes.skills} id="Skills">
             <header id={classes.titleHeader}>
                 <h2 className={classes.title}>Skills</h2>
             </header>

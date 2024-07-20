@@ -1,0 +1,48 @@
+.ul {
+    display: flex;
+    gap: clamp(10px, 3vw, 40px);
+}
+
+.list_item {
+    background: none;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-size: max(15px, 1.4vw);
+    font-weight: 100;
+    cursor: pointer;
+
+    transition: color .3s;
+}
+
+.list_item:hover {
+    color: white;
+}
+
+.list_item::after {
+    content: "";
+    display: block;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 5px;
+    transition: width .3s;
+}
+
+.list_item:hover::after {
+    width: 100%;
+}
+
+.li:nth-child(odd) .list_item::after {
+    background-color: var(--main-blue);
+}
+
+.li:nth-child(even) .list_item::after {
+    background-color: var(--main-red);
+}
+
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+}

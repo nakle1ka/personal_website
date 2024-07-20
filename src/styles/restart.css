@@ -6,7 +6,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
     list-style: none;
-    scroll-margin-top: 100px;
     font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+
+    scroll-margin-top: 100px;
+    scroll-behavior: smooth;
 }

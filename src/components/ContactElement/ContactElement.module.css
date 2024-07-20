@@ -1,0 +1,16 @@
+.contactElement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+}
+
+.icon {
+    width: max(5%, 50px);
+}
+
+.text {
+    color: white;
+    font-size: clamp(15px, 2vw, 35px);
+}

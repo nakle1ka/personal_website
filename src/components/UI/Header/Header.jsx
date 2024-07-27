@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import MyButton from "../MyButton/MyButton";
 import Navbar from "../Navbar/Navbar";
@@ -12,9 +12,14 @@ const Header = ({ logo }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isShowHiddenNav, setIsShowHiddenNav] = useState(false)
 
-    const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = useCallback(() => {
+        const currentScroll = window.scrollY > 50
+        if(currentScroll && isScrolled === false) {
+            setIsScrolled(true)
+        } else if(!currentScroll && isScrolled === true) {
+            setIsScrolled(false)
+        }
+    }, [isScrolled]);
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -22,7 +27,7 @@ const Header = ({ logo }) => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [handleScroll]);
 
     return (
         <header className={

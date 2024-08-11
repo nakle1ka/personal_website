@@ -3,14 +3,14 @@ import { useInView } from "react-intersection-observer";
 
 import classes from "./PortfolioElement.module.css"
 
-import htmlSVG from "../images/skills/html.svg"
-import cssSVG from "../images/skills/css.svg"
-import scssSVG from "../images/skills/scss.svg"
-import jsSVG from "../images/skills/js.svg"
-import reactSVG from "../images/skills/react.svg"
-import nodeSVG from "../images/skills/node-js.svg"
-import mongoSVG from "../images/skills/mongo.svg"
-import gitSVG from "../images/skills/git.svg"
+import htmlSVG from "../../images/skills/html.svg"
+import cssSVG from "../../images/skills/css.svg"
+import scssSVG from "../../images/skills/scss.svg"
+import jsSVG from "../../images/skills/js.svg"
+import reactSVG from "../../images/skills/react.svg"
+import nodeSVG from "../../images/skills/node-js.svg"
+import mongoSVG from "../../images/skills/mongo.svg"
+import gitSVG from "../../images/skills/git.svg"
 
 const PortfolioElement = ({ image, name, desc, skills }) => {
     const skillImages = {
@@ -51,11 +51,12 @@ const PortfolioElement = ({ image, name, desc, skills }) => {
                     <p className={classes.desc}>{desc}</p>
                 </div>
                 <div className={classes.skillsContainer}>
-                    {skills.map(el =>
+                    {skills.map((el, index) =>
                         <img
                             src={skillImages[el]}
                             alt=""
                             className={classes.skillImage}
+                            key={index}
                         />
                     )}
                 </div>

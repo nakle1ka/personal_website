@@ -1,4 +1,4 @@
-import PortfolioElement from "../../PortfolioElement/PortfolioElement";
+import PortfolioElement from "../PortfolioElement/PortfolioElement";
 
 import portfolioList from "../../helpers/portfolioList";
 
@@ -15,6 +15,7 @@ const Portfolio = () => {
                         name={element.name}
                         desc={element.description}
                         skills={element.skills}
+                        key={element.name}
                     />
                 )}
             </div>

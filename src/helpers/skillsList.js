@@ -3,6 +3,7 @@ import cssSVG from "../images/skills/css.svg"
 import scssSVG from "../images/skills/scss.svg"
 import jsSVG from "../images/skills/js.svg"
 import reactSVG from "../images/skills/react.svg"
+import nextSVG from "../images/skills/next.svg"
 import nodeSVG from "../images/skills/node-js.svg"
 import mongoSVG from "../images/skills/mongo.svg"
 import gitSVG from "../images/skills/git.svg"
@@ -26,6 +27,7 @@ const skillList = {
             text: "CSS3"
         },
         {
+            id: "100",
             image: scssSVG,
             text: "SCSS(SASS)"
         },
@@ -41,43 +43,48 @@ const skillList = {
         },
         {
             id: "5",
+            image: nextSVG,
+            text: "NextJS"
+        },
+        {
+            id: "6",
             image: nodeSVG,
             text: "NodeJS, ExpressJS"
         },
         {
-            id: "6",
+            id: "7",
             image:  mongoSVG,
             text: "MongoDB"
         },
         {
-            id: "7",
+            id: "8",
             image: gitSVG,
             text: "Git, GitHub"
         },
     ],
     soft: [
         {
-            id: "8",
+            id: "9",
             image: teamSVG,
             text: "Have experience working in a team"
         },
         {
-            id: "9",
+            id: "10",
             image: timeSVG,
             text: "I am responsible about deadlines"
         },
         {
-            id: "10",
+            id: "11",
             image: wheelSVG,
             text: "I am attentive to the details of the terms of reference"
         },
         {
-            id: "11",
+            id: "12",
             image: criticismSVG,
             text: "I welcome constructive criticism"
         },
         {
-            id: "12",
+            id: "13",
             image: skillSVG,
             text: "I am motivated to improve my skills"
         },

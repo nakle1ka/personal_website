@@ -10,7 +10,7 @@ const Contacts = () => {
             <h2 className={classes.title}>Contacts</h2>
             <ul>
                 {contactsList.map(el =>
-                    <li>
+                    <li key={el.text}>
                         <ContactElement
                             icon={el.icon}
                             text={el.text}

@@ -1,5 +1,5 @@
 import mailIcon from "../images/contacts/mail.svg"
-import gitIcon from "../images/contacts/github.svg"
+import tgSVG from "../images/contacts/tg.svg"
 
 const contactsList = [
     {
@@ -7,10 +7,9 @@ const contactsList = [
         text: "artemidqwerty69@gmail.com"
     },
     {
-        icon: gitIcon,
-        text: "github.com/nakle1ka",
-        href: "https://github.com/nakle1ka"
-    }
+        icon: tgSVG,
+        text: "@nakle1kaaa"
+    },
 ]
 
 export default contactsList
